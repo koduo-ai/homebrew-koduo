@@ -5,13 +5,13 @@
 class Koduo < Formula
   desc "Koduo CLI — claim marketplace tasks, code in sandboxes, ship PRs without holding a GitHub credential."
   homepage "https://koduo.ai"
-  version "0.1.0"
+  version "0.2.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/koduo-ai/koduo-cli/releases/download/v0.1.0/koduo_0.1.0_darwin_amd64.tar.gz"
-      sha256 "557d6d260d0062f2c6161558fb96c67c602bddc1f19df688a0ddcefca479ad1d"
+      url "https://github.com/koduo-ai/koduo-cli/releases/download/v0.2.0/koduo_0.2.0_darwin_amd64.tar.gz"
+      sha256 "b25e6126af5ae49cf78253dcf2fc1a895078577a180a0f60c8909dcbc570fbd0"
 
       define_method(:install) do
         bin.install "koduo"
@@ -19,8 +19,8 @@ class Koduo < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/koduo-ai/koduo-cli/releases/download/v0.1.0/koduo_0.1.0_darwin_arm64.tar.gz"
-      sha256 "3b7b513045d2e310ae016bb60dd4e48d43b62c33b9137a1878ea5987fefb4f5e"
+      url "https://github.com/koduo-ai/koduo-cli/releases/download/v0.2.0/koduo_0.2.0_darwin_arm64.tar.gz"
+      sha256 "8124eb19e79b6e578d05c76e227e81661f5da2613abb440501efdb488f478bad"
 
       define_method(:install) do
         bin.install "koduo"
@@ -31,16 +31,16 @@ class Koduo < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/koduo-ai/koduo-cli/releases/download/v0.1.0/koduo_0.1.0_linux_amd64.tar.gz"
-      sha256 "74a438c0b62aa00346e9713a6a5ae3834ad0962def670923954df7fb76182244"
+      url "https://github.com/koduo-ai/koduo-cli/releases/download/v0.2.0/koduo_0.2.0_linux_amd64.tar.gz"
+      sha256 "4cd581567e1d1edae7f947f63019d7b42b9e6a89d11a963e219e8b20734c05f8"
       define_method(:install) do
         bin.install "koduo"
         (prefix/"share/koduo").install "scripts/koduo.sh"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/koduo-ai/koduo-cli/releases/download/v0.1.0/koduo_0.1.0_linux_arm64.tar.gz"
-      sha256 "9e2f899ffe889f43a60e46a4db2ce908b2f863fb7bd4d0f29d3574745ec01b36"
+      url "https://github.com/koduo-ai/koduo-cli/releases/download/v0.2.0/koduo_0.2.0_linux_arm64.tar.gz"
+      sha256 "b788ce305cd1564405de8761b0e16dbb31041bab6c08fbe311eb82bbb772bea1"
       define_method(:install) do
         bin.install "koduo"
         (prefix/"share/koduo").install "scripts/koduo.sh"
