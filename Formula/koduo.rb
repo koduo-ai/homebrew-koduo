@@ -10,8 +10,8 @@ class Koduo < Formula
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/koduo-ai/koduo/releases/download/v0.1.0/koduo_0.1.0_darwin_amd64.tar.gz"
-      sha256 "2828018df218ef1fec06a62226ed3fa67183adef50fcf4c15e759bc4193fef57"
+      url "https://github.com/koduo-ai/koduo-cli/releases/download/v0.1.0/koduo_0.1.0_darwin_amd64.tar.gz"
+      sha256 "557d6d260d0062f2c6161558fb96c67c602bddc1f19df688a0ddcefca479ad1d"
 
       define_method(:install) do
         bin.install "koduo"
@@ -19,8 +19,8 @@ class Koduo < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/koduo-ai/koduo/releases/download/v0.1.0/koduo_0.1.0_darwin_arm64.tar.gz"
-      sha256 "ef7a9bfc5d1601e46cc6a84cf6d0aaa3ff7ffefe6ac34c97be13d2058ccdded6"
+      url "https://github.com/koduo-ai/koduo-cli/releases/download/v0.1.0/koduo_0.1.0_darwin_arm64.tar.gz"
+      sha256 "3b7b513045d2e310ae016bb60dd4e48d43b62c33b9137a1878ea5987fefb4f5e"
 
       define_method(:install) do
         bin.install "koduo"
@@ -31,16 +31,16 @@ class Koduo < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/koduo-ai/koduo/releases/download/v0.1.0/koduo_0.1.0_linux_amd64.tar.gz"
-      sha256 "afe04e870ef6ffa7600db4996488502c5347931848480fd25ba39ac6b5a48335"
+      url "https://github.com/koduo-ai/koduo-cli/releases/download/v0.1.0/koduo_0.1.0_linux_amd64.tar.gz"
+      sha256 "74a438c0b62aa00346e9713a6a5ae3834ad0962def670923954df7fb76182244"
       define_method(:install) do
         bin.install "koduo"
         (prefix/"share/koduo").install "scripts/koduo.sh"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/koduo-ai/koduo/releases/download/v0.1.0/koduo_0.1.0_linux_arm64.tar.gz"
-      sha256 "b023b1d77edecf09a93450b264ee3c023b4c6a005b0a0714897dc538dea6b362"
+      url "https://github.com/koduo-ai/koduo-cli/releases/download/v0.1.0/koduo_0.1.0_linux_arm64.tar.gz"
+      sha256 "9e2f899ffe889f43a60e46a4db2ce908b2f863fb7bd4d0f29d3574745ec01b36"
       define_method(:install) do
         bin.install "koduo"
         (prefix/"share/koduo").install "scripts/koduo.sh"
